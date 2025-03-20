@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./wordle-logo-kopi.png"/>
+</div>
+
 # WORDLE GAME - REACT
 
 ## Overview
