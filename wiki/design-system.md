@@ -6,7 +6,7 @@ Our color palette is designed to provide clear visual feedback and maintain cons
 
 - `--color-correct: #6aaa64` (Green)
 - `--color-present: #c9b458` (Yellow)
-- `--color-absent: #787c7e` (Gray)
+- `--color-absent: #3a3a3c` (Gray)
 - `--color-background: #121213` (Dark Background)
 - `--color-text: #d7dadc` (Light Text)
 
