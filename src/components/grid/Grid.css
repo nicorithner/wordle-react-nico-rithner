@@ -25,13 +25,13 @@
 
 .cell.correct {
   background: var(--color-correct);
-  border-color: var(--color-correct);
+  border: 2px solid var(--color-border-light);
 }
 .cell.present {
   background: var(--color-present);
-  border-color: var(--color-present);
+  border: 2px solid var(--color-border-light);
 }
 .cell.absent {
   background: var(--color-absent);
-  border-color: var(--color-absent);
+  border: 2px solid var(--color-border-light);
 }
