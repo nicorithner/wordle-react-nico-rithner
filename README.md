@@ -8,7 +8,7 @@ Create simple version of the game Wordle implemented in Vite using React and Typ
 
 - All rules are implemented.
 - Include a unit test of the word guessing routine that validates at least the last two
-  -ules.
+  rules.
 - Your code cannot perform any network communication.
 - The word list array must be stored in a data or words file as constant .
 - The unit test may use a hard-coded word list.
