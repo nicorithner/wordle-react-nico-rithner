@@ -1,6 +1,7 @@
+import { KeyboardProps } from "../../types/types";
 import "./Keyboard.css";
 
-export default function Keyboard() {
+export default function Keyboard({ onKeyPress }: KeyboardProps) {
   const rows = [
     ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
     ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
@@ -12,9 +13,7 @@ export default function Keyboard() {
       {rows.map((row, i) => (
         <div key={i} className="row">
           {row.map((key) => (
-            <button className="key"
-              key={key}
-            >
+            <button className="key" key={key} onClick={() => onKeyPress(key)}>
               {key}
             </button>
           ))}
