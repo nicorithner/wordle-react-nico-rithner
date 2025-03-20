@@ -1,7 +1,9 @@
 import { KeyboardProps } from "../../types/types";
 import "./Keyboard.css";
 
-export default function Keyboard({ onKeyPress }: KeyboardProps) {
+
+
+export default function Keyboard({ onKeyPress, usedKeys }: KeyboardProps) {
   const rows = [
     ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
     ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
@@ -13,7 +15,11 @@ export default function Keyboard({ onKeyPress }: KeyboardProps) {
       {rows.map((row, i) => (
         <div key={i} className="row">
           {row.map((key) => (
-            <button className="key" key={key} onClick={() => onKeyPress(key)}>
+            <button
+              key={key}
+              onClick={() => onKeyPress(key)}
+              className={`key ${usedKeys[key.toLowerCase()] || ""}`}
+            >
               {key}
             </button>
           ))}
