@@ -9,6 +9,7 @@ Our color palette is designed to provide clear visual feedback and maintain cons
 - `--color-absent: #3a3a3c` (Gray)
 - `--color-background: #121213` (Dark Background)
 - `--color-text: #d7dadc` (Light Text)
+- `--color-border-light: #B5B7BB` (light border)
 
 ### Usage
 
