@@ -4,19 +4,17 @@ export default function Grid() {
   const emptyRows = Array.from({ length: 5 }, () => "");
 
   return (
-    <div className="game-container">
-      <div className="grid">
-        {emptyRows.map((_, rowIndex) => (
-          <div key={`empty-${rowIndex}`} className="row">
-            {Array.from({ length: 5 }, (_, colIndex) => (
-              <div
-                key={`empty-cell-${rowIndex}-${colIndex}`}
-                className="cell"
-              ></div>
-            ))}
-          </div>
-        ))}
-      </div>
+    <div className="grid">
+      {emptyRows.map((_, rowIndex) => (
+        <div key={`empty-${rowIndex}`} className="row">
+          {Array.from({ length: 5 }, (_, colIndex) => (
+            <div
+              key={`empty-cell-${rowIndex}-${colIndex}`}
+              className="cell"
+            ></div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
