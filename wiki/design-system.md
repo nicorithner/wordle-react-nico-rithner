@@ -10,6 +10,7 @@ Our color palette is designed to provide clear visual feedback and maintain cons
 - `--color-background: #121213` (Dark Background)
 - `--color-text: #d7dadc` (Light Text)
 - `--color-border-light: #B5B7BB` (light border)
+- `--color-keys-gray: #818384` (light gray keyboard keys)
 
 ### Usage
 
