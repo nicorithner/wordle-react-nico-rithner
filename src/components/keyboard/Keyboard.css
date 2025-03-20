@@ -21,6 +21,7 @@
   background-color: var(--color-keys-gray);
   color: var(--color-text);
   font-weight: bold;
+  font-size: 1.25rem;
   cursor: pointer;
   text-transform: uppercase;
 }
