@@ -17,6 +17,8 @@
   --color-absent: #3a3a3c;
   --color-background: #121213;
   --color-text: #d7dadc;
+  --color-border-light: #b5b7bb;
+  --color-keys-gray: #818384;
 }
 
 body {
