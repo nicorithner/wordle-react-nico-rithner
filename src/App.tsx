@@ -4,7 +4,7 @@ import { evaluateGuess } from "./utils/wordUtils";
 import Grid from "./components/grid/Grid";
 import Keyboard from "./components/keyboard/Keyboard";
 import "./App.css";
-import logo from "./assets/images/wordle-logo-transparent-bkg.png";
+import logo from "./assets/images/wordle-no-bkg.png";
 import shuffleArray from "./utils/shuffleArray";
 
 export default function App() {
@@ -80,7 +80,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <img src={logo} alt="" />
+      <img id="logo" src={logo} alt="wordle logo" />
       <div className="game-container">
         <Grid guesses={guesses} target={target} currentGuess={currentGuess} />
         <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />

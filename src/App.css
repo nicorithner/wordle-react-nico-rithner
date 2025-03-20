@@ -5,7 +5,11 @@
   padding: 2rem;
   text-align: center;
 }
-
+.app > #logo {
+  width: 40rem;
+  height: auto;
+  margin-bottom: 3rem;
+}
 .game-container {
   max-width: 100%;
   margin: 3rem auto;
