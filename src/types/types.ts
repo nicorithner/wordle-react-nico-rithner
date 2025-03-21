@@ -14,3 +14,10 @@ export interface KeyboardProps {
 export interface WelcomeProps {
   onStartGame: () => void;
 }
+
+export interface GameOverProps {
+  won: boolean;
+  target: string;
+  onPlayAgain: () => void;
+  onBackToWelcome: () => void;
+}
