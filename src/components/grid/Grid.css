@@ -1,23 +1,26 @@
 .grid {
   display: grid;
-  gap: 5px;
-  margin: 20px 0;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) 0;
+  width: 100%;
+  max-width: 22rem;
 }
 
 .row {
   display: flex;
-  gap: 5px;
+  gap: var(--spacing-xs);
   justify-content: center;
+  width: 100%;
 }
 
 .cell {
-  width: 6rem;
-  height: 6rem;
-  border: 2px solid var(--color-border-light);
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0.125rem solid var(--color-light-gray);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
   color: var(--color-text);
@@ -25,13 +28,15 @@
 
 .cell.correct {
   background: var(--color-correct);
-  border: 2px solid var(--color-border-light);
+  border: 0.125rem solid var(--color-light-gray);
 }
+
 .cell.present {
   background: var(--color-present);
-  border: 2px solid var(--color-border-light);
+  border: 0.125rem solid var(--color-light-gray);
 }
+
 .cell.absent {
   background: var(--color-absent);
-  border: 2px solid var(--color-border-light);
+  border: 0.125rem solid var(--color-light-gray);
 }

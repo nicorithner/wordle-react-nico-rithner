@@ -7,17 +7,33 @@ Our color palette is designed to provide clear visual feedback and maintain cons
 - `--color-correct: #6aaa64` (Green)
 - `--color-present: #c9b458` (Yellow)
 - `--color-absent: #3a3a3c` (Gray)
-- `--color-background: #121213` (Dark Background)
+- `--color-background-dark: #121213` (Dark Background)
+- `--color-background-medium: #0a0606` (Medium Background)
+- `--color-background-light: #ffffff1a` (Light Background)
 - `--color-text: #d7dadc` (Light Text)
-- `--color-border-light: #B5B7BB` (light border)
+- `--color-light-gray: #B5B7BB` (light border)
 - `--color-keys-gray: #818384` (light gray keyboard keys)
+
+### Spacing variables
+
+- `--spacing-xs: 0.25rem`
+- `--spacing-sm: 0.5rem`
+- `--spacing-md: 0.75rem`
+- `--spacing-lg: 1rem`
+- `--spacing-xl: 1.5rem`
+- `--spacing-xxl: 2rem`
+
+### Border radius
+
+- `--radius-sm: 0.25rem`
+- `--radius-md: 0.375rem`
 
 ### Usage
 
 - `--color-correct`: Used for correctly guessed letters in the right position
 - `--color-present`: Used for correctly guessed letters in the wrong position
 - `--color-absent`: Used for letters that are not in the word
-- `--color-background`: Main background color
+- `--color-background-dark`: Main background color
 - `--color-text`: Main text color
 
 ## Typography

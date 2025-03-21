@@ -81,25 +81,27 @@ export default function App() {
   return (
     <div className="app">
       <img id="logo" src={logo} alt="wordle logo" />
-      <div className="game-container">
-        <Grid guesses={guesses} target={target} currentGuess={currentGuess} />
-        <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
-      </div>
-
-      {gameOver && (
-        <div className="game-over">
-          {guesses.some(
-            (guess) => guess.toLowerCase() === target.toLowerCase()
-          ) ? (
-            <div id="announcement">🎉 You won!</div>
-          ) : (
-            <div id="announcement">😞 Game Over! Word was: {target}</div>
-          )}
-          <button className="game-over button" onClick={startNewGame}>
-            Start New Game
-          </button>
+      <div className="game-wrapper">
+        <div className="game-container">
+          <Grid guesses={guesses} target={target} currentGuess={currentGuess} />
+          <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
         </div>
-      )}
+
+        {gameOver && (
+          <div className="game-over">
+            {guesses.some(
+              (guess) => guess.toLowerCase() === target.toLowerCase()
+            ) ? (
+              <div id="announcement">🎉 You won!</div>
+            ) : (
+              <div id="announcement">😞 Game Over! Word was: {target}</div>
+            )}
+            <button className="game-over button" onClick={startNewGame}>
+              Start New Game
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
