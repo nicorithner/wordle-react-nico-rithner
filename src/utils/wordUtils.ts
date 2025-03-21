@@ -1,8 +1,6 @@
 import { LetterState } from "../types/types";
 
 export const evaluateGuess = (guess: string, target: string): LetterState[] => {
-  // Temporary console.log for manual testing
-  console.log("Guess: ", guess, " - ", "Target: ", target);
   const result: LetterState[] = Array(5).fill("absent");
   const targetLetters: (string | null)[] = [...target];
 
