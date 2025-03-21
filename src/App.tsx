@@ -4,7 +4,7 @@ import { evaluateGuess } from "./utils/wordUtils";
 import Grid from "./components/grid/Grid";
 import Keyboard from "./components/keyboard/Keyboard";
 import Welcome from "./components/welcome/Welcome";
-
+import GameOver from "./components/gameover/GameOver";
 import "./App.css";
 import logo from "/images/wordle-no-bkg.png";
 import shuffleArray from "./utils/shuffleArray";
@@ -14,22 +14,31 @@ export default function App() {
   const [guesses, setGuesses] = useState<string[]>([]);
   const [currentGuess, setCurrentGuess] = useState("");
   const [gameOver, setGameOver] = useState(false);
+  const [gameWon, setGameWon] = useState(false);
   const [usedKeys, setUsedKeys] = useState<Record<string, string>>({});
   const [showWelcome, setShowWelcome] = useState(true);
   const shuffledWords = useMemo(() => shuffleArray([...WORDS]), []);
 
   const startNewGame = useCallback(() => {
-    setTarget(shuffledWords[0]);
+    setTarget(shuffledWords[Math.floor(Math.random() * shuffledWords.length)]);
     setGuesses([]);
     setCurrentGuess("");
     setGameOver(false);
+    setGameWon(false);
     setUsedKeys({});
     setShowWelcome(false);
   }, [shuffledWords]);
 
+  const backToWelcome = useCallback(() => {
+    setShowWelcome(true);
+    setGameOver(false);
+  }, []);
+
   useEffect(() => {
     if (!showWelcome && !target) {
-      setTarget(shuffledWords[0]);
+      setTarget(
+        shuffledWords[Math.floor(Math.random() * shuffledWords.length)]
+      );
     }
   }, [showWelcome, shuffledWords, target]);
 
@@ -45,6 +54,7 @@ export default function App() {
         updateUsedKeys(currentGuess);
 
         if (currentGuess.toLowerCase() === target.toLowerCase()) {
+          setGameWon(true);
           setGameOver(true);
         } else if (newGuesses.length >= 5) {
           setGameOver(true);
@@ -86,11 +96,11 @@ export default function App() {
 
   return (
     <div className="app">
-      <img id="logo" src={logo} alt="wordle logo" />
       {showWelcome ? (
         <Welcome onStartGame={startNewGame} />
       ) : (
         <div className="game-wrapper">
+          <img id="logo" src={logo} alt="wordle logo" />
           <div className="game-container">
             <Grid
               guesses={guesses}
@@ -101,18 +111,12 @@ export default function App() {
           </div>
 
           {gameOver && (
-            <div className="game-over">
-              {guesses.some(
-                (guess) => guess.toLowerCase() === target.toLowerCase(),
-              ) ? (
-                <div id="announcement">🎉 You won!</div>
-              ) : (
-                <div id="announcement">😞 Game Over! Word was: {target}</div>
-              )}
-              <button className="game-over button" onClick={startNewGame}>
-                Start New Game
-              </button>
-            </div>
+            <GameOver
+              won={gameWon}
+              target={target}
+              onPlayAgain={startNewGame}
+              onBackToWelcome={backToWelcome}
+            />
           )}
         </div>
       )}
