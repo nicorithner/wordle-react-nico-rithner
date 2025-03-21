@@ -34,3 +34,90 @@ Create simple version of the game Wordle implemented in Vite using React and Typ
 - Vite
 - React
 - TypeScript
+
+## Links
+
+- Live Site URL: [github page](https://nicorithner.github.io/wordle-react-nico-rithner/)
+
+## Install locally
+
+### Clone Project
+
+To install locally clone this repo. In your terminal type:
+
+`git clone <git@github.com>:nicorithner/wordle-react-nico-rithner.git`
+
+### Install Dependencies
+
+To install dependencies navigate to the project directory in your terminal and install:
+
+```bash
+cd wordle-react-nico-rithner
+yarn install
+```
+
+### Run project
+
+To run the project you can type in the terminal:
+
+`yarn dev`
+
+and then navigate in the browser to the local host address displayed in the terminal. For example:
+
+```
+Local:   <http://localhost:5173/wordle-react-nico-rithner/>
+```
+
+### Tests
+
+To test the logic you can run the test in the terminal with the command:
+
+`yarn test`
+
+To see the test details please inspect the files under the tests directory.
+
+## Screenshots
+
+### Mobile Views
+
+### Mobile Start Screen
+
+<div align="center">
+
+  <img src="./mobile.png" style="width: 500px"/>
+
+</div>
+
+### Mobile Win Screen
+
+<div align="center">
+
+  <img src="./mobile-win.png" style="width: 500px"/>
+
+</div>
+
+### Desktop Views
+
+### Desktop Start Screen
+
+<div align="center">
+
+  <img src="./desktop.png" style="width: 500px"/>
+
+</div>
+
+### Desktop Win Screen
+
+<div align="center">
+
+  <img src="./desktop-win.png" style="width: 500px"/>
+
+</div>
+
+### Desktop Lose Screen
+
+<div align="center">
+
+  <img src="./desktop-lose.png" style="width: 500px"/>
+
+</div>
