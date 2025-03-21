@@ -4,7 +4,7 @@ import { evaluateGuess } from "./utils/wordUtils";
 import Grid from "./components/grid/Grid";
 import Keyboard from "./components/keyboard/Keyboard";
 import "./App.css";
-import logo from "./assets/images/wordle-no-bkg.png";
+import logo from "/images/wordle-no-bkg.png";
 import shuffleArray from "./utils/shuffleArray";
 
 export default function App() {
