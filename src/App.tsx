@@ -3,6 +3,8 @@ import { WORDS } from "./data/words";
 import { evaluateGuess } from "./utils/wordUtils";
 import Grid from "./components/grid/Grid";
 import Keyboard from "./components/keyboard/Keyboard";
+import Welcome from "./components/welcome/Welcome";
+
 import "./App.css";
 import logo from "/images/wordle-no-bkg.png";
 import shuffleArray from "./utils/shuffleArray";
@@ -13,6 +15,7 @@ export default function App() {
   const [currentGuess, setCurrentGuess] = useState("");
   const [gameOver, setGameOver] = useState(false);
   const [usedKeys, setUsedKeys] = useState<Record<string, string>>({});
+  const [showWelcome, setShowWelcome] = useState(true);
   const shuffledWords = useMemo(() => shuffleArray([...WORDS]), []);
 
   const startNewGame = useCallback(() => {
@@ -21,11 +24,14 @@ export default function App() {
     setCurrentGuess("");
     setGameOver(false);
     setUsedKeys({});
+    setShowWelcome(false);
   }, [shuffledWords]);
 
   useEffect(() => {
-    startNewGame();
-  }, [startNewGame]);
+    if (!showWelcome && !target) {
+      setTarget(shuffledWords[0]);
+    }
+  }, [showWelcome, shuffledWords, target]);
 
   const handleKeyPress = (key: string) => {
     if (gameOver) return;
@@ -81,27 +87,35 @@ export default function App() {
   return (
     <div className="app">
       <img id="logo" src={logo} alt="wordle logo" />
-      <div className="game-wrapper">
-        <div className="game-container">
-          <Grid guesses={guesses} target={target} currentGuess={currentGuess} />
-          <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
-        </div>
-
-        {gameOver && (
-          <div className="game-over">
-            {guesses.some(
-              (guess) => guess.toLowerCase() === target.toLowerCase()
-            ) ? (
-              <div id="announcement">🎉 You won!</div>
-            ) : (
-              <div id="announcement">😞 Game Over! Word was: {target}</div>
-            )}
-            <button className="game-over button" onClick={startNewGame}>
-              Start New Game
-            </button>
+      {showWelcome ? (
+        <Welcome onStartGame={startNewGame} />
+      ) : (
+        <div className="game-wrapper">
+          <div className="game-container">
+            <Grid
+              guesses={guesses}
+              target={target}
+              currentGuess={currentGuess}
+            />
+            <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
           </div>
-        )}
-      </div>
+
+          {gameOver && (
+            <div className="game-over">
+              {guesses.some(
+                (guess) => guess.toLowerCase() === target.toLowerCase(),
+              ) ? (
+                <div id="announcement">🎉 You won!</div>
+              ) : (
+                <div id="announcement">😞 Game Over! Word was: {target}</div>
+              )}
+              <button className="game-over button" onClick={startNewGame}>
+                Start New Game
+              </button>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

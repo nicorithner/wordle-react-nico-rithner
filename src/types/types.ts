@@ -10,3 +10,7 @@ export interface KeyboardProps {
   onKeyPress: (key: string) => void;
   usedKeys: Record<string, string>;
 }
+
+export interface WelcomeProps {
+  onStartGame: () => void;
+}
