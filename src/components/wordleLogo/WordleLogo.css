@@ -1,0 +1,43 @@
+.wordle-logo {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-xl) 0;
+}
+
+.logo-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--default-color);
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+
+.logo-letter.w-letter {
+  background-color: var(--w-color);
+}
+
+.logo-letter.r-letter {
+  background-color: var(--r-color);
+}
+
+@keyframes hop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo-letter.animate {
+  animation: hop 0.5s ease;
+}

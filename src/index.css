@@ -23,6 +23,9 @@
   --color-text: #d7dadc;
   --color-light-gray: #b5b7bb;
   --color-keys-gray: #818384;
+  --w-color: #00be62;
+  --r-color: #fdbc58;
+  --default-color: #545454;
 
   /* Spacing variables */
   --spacing-xs: 0.25rem;

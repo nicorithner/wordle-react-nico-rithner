@@ -1,12 +1,12 @@
 import "./Welcome.css";
-import logo from "/images/wordle-no-bkg.png";
 import { WelcomeProps } from "../../types/types";
+import WordleLogo from "../wordleLogo/WordleLogo";
 
 export default function Welcome({ onStartGame }: WelcomeProps) {
   return (
     <div className="welcome-overlay">
       <div className="welcome-modal">
-        <img className="welcome-logo" src={logo} alt="wordle logo" />
+      <WordleLogo />
 
         <div className="welcome-content">
           <h2>Welcome to Wordle!</h2>
