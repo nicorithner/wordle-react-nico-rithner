@@ -21,3 +21,7 @@ export interface GameOverProps {
   onPlayAgain: () => void;
   onBackToWelcome: () => void;
 }
+
+export interface WordleLogoProps {
+  animate?: boolean;
+}
