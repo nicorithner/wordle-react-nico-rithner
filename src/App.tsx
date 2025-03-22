@@ -6,8 +6,8 @@ import Keyboard from "./components/keyboard/Keyboard";
 import Welcome from "./components/welcome/Welcome";
 import GameOver from "./components/gameover/GameOver";
 import "./App.css";
-import logo from "/images/wordle-no-bkg.png";
 import shuffleArray from "./utils/shuffleArray";
+import WordleLogo from "./components/wordleLogo/WordleLogo";
 
 export default function App() {
   const [target, setTarget] = useState("");
@@ -100,7 +100,7 @@ export default function App() {
         <Welcome onStartGame={startNewGame} />
       ) : (
         <div className="game-wrapper">
-          <img id="logo" src={logo} alt="wordle logo" />
+          <WordleLogo />
           <div className="game-container">
             <Grid
               guesses={guesses}
