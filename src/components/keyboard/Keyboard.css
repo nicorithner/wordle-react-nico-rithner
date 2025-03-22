@@ -84,9 +84,16 @@
   }
 
   .keyboard .key {
-    min-width: 1.75rem;
-    height: 2.25rem;
+    min-width: 2.25rem;
+    height: 2.5rem;
     font-size: 0.625rem;
     padding: 0 0.25rem;
+  }
+
+  /* Sizing only for Enter and Backspace */
+  .keyboard .row:last-child .key:first-child,
+  .keyboard .row:last-child .key:last-child {
+    min-width: fit-content;
+    font-size: 0.75rem;
   }
 }

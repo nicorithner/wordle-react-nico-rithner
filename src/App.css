@@ -9,7 +9,7 @@
   height: 100vh;
 }
 
-.app > #logo {
+#logo {
   width: 80%;
   max-width: 30rem;
   height: auto;
