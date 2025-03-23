@@ -6,6 +6,10 @@
 
 ## Overview
 
+<div align="center">
+  <img src="./wordle-demo.gif" style="width: 700px"/>
+</div>
+
 ## The Challenge
 
 Create simple version of the game Wordle implemented in Vite using React and TypeScript including the following requirements:
@@ -84,7 +88,23 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./mobile.png" style="width: 500px"/>
+  <img src="./welcome-mobile.png" style="width: 500px"/>
+
+</div>
+
+### Mobile Game Beginning Screen
+
+<div align="center">
+
+  <img src="./mobile-beginning.png" style="width: 500px"/>
+
+</div>
+
+### Mobile Mid Game Screen
+
+<div align="center">
+
+  <img src="./mobile-mid.png" style="width: 500px"/>
 
 </div>
 
@@ -102,7 +122,23 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./desktop.png" style="width: 500px"/>
+  <img src="./welcome.png" style="width: 500px"/>
+
+</div>
+
+### Desktop Game Beginning Screen
+
+<div align="center">
+
+  <img src="./desktop-beginning.png" style="width: 500px"/>
+
+</div>
+
+### Desktop Mid Game Screen
+
+<div align="center">
+
+  <img src="./desktop-mid.png" style="width: 500px"/>
 
 </div>
 
@@ -111,13 +147,5 @@ To see the test details please inspect the files under the tests directory.
 <div align="center">
 
   <img src="./desktop-win.png" style="width: 500px"/>
-
-</div>
-
-### Desktop Lose Screen
-
-<div align="center">
-
-  <img src="./desktop-lose.png" style="width: 500px"/>
 
 </div>
