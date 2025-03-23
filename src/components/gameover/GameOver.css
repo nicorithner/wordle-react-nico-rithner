@@ -154,9 +154,10 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 30rem) {
   .gameover-modal {
     padding: var(--spacing-lg);
+    margin-bottom: 8rem;
   }
 
   .win-title,
