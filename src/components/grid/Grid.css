@@ -3,7 +3,7 @@
   gap: var(--spacing-xs);
   margin: var(--spacing-md) 0;
   width: 100%;
-  max-width: 22rem;
+  /* max-width: 22rem; */
 }
 
 .row {
@@ -39,4 +39,24 @@
 .cell.absent {
   background: var(--color-absent);
   border: 0.125rem solid var(--color-light-gray);
+}
+
+@media (max-width: 24rem) {
+  .grid, .row {
+    gap: var(--spacing-sm);
+  }
+  .cell {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (min-width: 24rem) {
+  .grid, .row {
+    gap: var(--spacing-sm);
+  }
+  .cell {
+    width: 5rem;
+    height: 5rem;
+  }
 }

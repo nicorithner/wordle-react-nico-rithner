@@ -17,20 +17,21 @@
 }
 
 .game-wrapper {
-  max-width: 100%;
+  width: 100%;
+  max-width: 40rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: var(--spacing-lg);
   margin: var(--spacing-lg);
+  background: linear-gradient(180deg, #2a2a2c, #000);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.5);
 }
 
 .game-container {
-  width: 100%;
   padding: var(--spacing-lg);
   border-radius: var(--radius-md);
-  background: linear-gradient(180deg, #2a2a2c, #000);
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,19 +85,24 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    justify-content: flex-start;
   }
 
   .game-wrapper {
     width: 100%;
-    padding: var(--spacing-sm);
-    margin: var(--spacing-sm);
+    padding: var(--spacing-xxl);
     margin-bottom: 0;
+    height: 70vh;
+    /* justify-content: space-between; */
+    gap: var(--spacing-xxl);
   }
 
   .game-container {
     width: 90%;
     padding: var(--spacing-sm);
-    margin-bottom: 5rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .keyboard-section {
