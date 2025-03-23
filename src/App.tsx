@@ -93,32 +93,39 @@ export default function App() {
 
     setUsedKeys(newUsedKeys);
   };
-
   return (
     <div className="app">
       {showWelcome ? (
         <Welcome onStartGame={startNewGame} />
       ) : (
-        <div className="game-wrapper">
-          <WordleLogo animate={false} />
-          <div className="game-container">
-            <Grid
-              guesses={guesses}
-              target={target}
-              currentGuess={currentGuess}
-            />
-            <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
+        <>
+          <div className="game-wrapper">
+            <WordleLogo animate={false} />
+            <div className="game-container">
+              <Grid
+                guesses={guesses}
+                target={target}
+                currentGuess={currentGuess}
+              />
+              <div className="keyboard-section">
+                <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
+              </div>
+            </div>
+
+            {gameOver && (
+              <GameOver
+                won={gameWon}
+                target={target}
+                onPlayAgain={startNewGame}
+                onBackToWelcome={backToWelcome}
+              />
+            )}
           </div>
 
-          {gameOver && (
-            <GameOver
-              won={gameWon}
-              target={target}
-              onPlayAgain={startNewGame}
-              onBackToWelcome={backToWelcome}
-            />
-          )}
-        </div>
+          <div className="keyboard-mobile-section">
+            <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
+          </div>
+        </>
       )}
     </div>
   );
