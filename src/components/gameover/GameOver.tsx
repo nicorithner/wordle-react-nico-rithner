@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./GameOver.css";
 import { GameOverProps } from "../../types/types";
+import confetti from "canvas-confetti";
 
 export default function GameOver({
   won,
@@ -11,6 +12,45 @@ export default function GameOver({
   const [playerWins, setPlayerWins] = useState(0);
   const [wordleWins, setWordleWins] = useState(0);
   const hasRun = useRef(false);
+
+  const triggerConfetti = () => {
+    const duration = 1500;
+    const animationEnd = Date.now() + duration;
+    const defaults = {
+      startVelocity: 30,
+      spread: 360,
+      ticks: 60,
+      zIndex: 1002,
+    };
+
+    const interval = setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: 0.1, y: 0.5 },
+      });
+
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: 0.9, y: 0.5 },
+      });
+
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: 0.5, y: 0.1 },
+      });
+    }, 250);
+  };
 
   useEffect(() => {
     if (hasRun.current) return;
@@ -43,6 +83,7 @@ export default function GameOver({
 
     if (won) {
       newPlayerWins += 1;
+      setTimeout(() => triggerConfetti(), 100);
     } else {
       newWordleWins += 1;
     }
