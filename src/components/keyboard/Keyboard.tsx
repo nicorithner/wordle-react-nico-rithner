@@ -1,7 +1,6 @@
 import { KeyboardProps } from "../../types/types";
 import "./Keyboard.css";
-
-
+import { FiDelete } from "react-icons/fi";
 
 export default function Keyboard({ onKeyPress, usedKeys }: KeyboardProps) {
   const rows = [
@@ -10,8 +9,8 @@ export default function Keyboard({ onKeyPress, usedKeys }: KeyboardProps) {
     ["Enter", "Z", "X", "C", "V", "B", "N", "M", "Backspace"],
   ];
 
-  return (
-    <div className="keyboard">
+  const renderKeyboard = (className: string) => (
+    <div className={className}>
       {rows.map((row, i) => (
         <div key={i} className="row">
           {row.map((key) => (
@@ -20,11 +19,27 @@ export default function Keyboard({ onKeyPress, usedKeys }: KeyboardProps) {
               onClick={() => onKeyPress(key)}
               className={`key ${usedKeys[key.toLowerCase()] || ""}`}
             >
-              {key}
+              {key === "Backspace" ? (
+                <>
+                  <span className="backspace-text">{key}</span>
+                  <span className="backspace-icon">
+                    <FiDelete />
+                  </span>
+                </>
+              ) : (
+                key
+              )}
             </button>
           ))}
         </div>
       ))}
     </div>
+  );
+
+  return (
+    <>
+      {renderKeyboard("keyboard")}
+      {renderKeyboard("keyboard-mobile")}
+    </>
   );
 }
