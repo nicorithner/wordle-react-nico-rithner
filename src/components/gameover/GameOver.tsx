@@ -70,11 +70,9 @@ export default function GameOver({
           {won ? "🎉 You Won!" : "Game Over!"}
         </h2>
 
-        {!won && (
-          <p className="target-word">
-            The word was: <span>{target}</span>
-          </p>
-        )}
+        <p className="target-word">
+          The word was: <span>{target}</span>
+        </p>
 
         <div className="stats">
           <h3>Score</h3>
