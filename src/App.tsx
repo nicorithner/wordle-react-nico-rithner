@@ -17,10 +17,13 @@ export default function App() {
   const [gameWon, setGameWon] = useState(false);
   const [usedKeys, setUsedKeys] = useState<Record<string, string>>({});
   const [showWelcome, setShowWelcome] = useState(true);
+  const [wordIndex, setWordIndex] = useState(0);
   const shuffledWords = useMemo(() => shuffleArray([...WORDS]), []);
 
   const startNewGame = useCallback(() => {
-    setTarget(shuffledWords[Math.floor(Math.random() * shuffledWords.length)]);
+    setTarget(shuffledWords[wordIndex]);
+    setWordIndex((prevIndex) => (prevIndex + 1) % shuffledWords.length);
+
     setGuesses([]);
     setCurrentGuess("");
     setGameOver(false);
@@ -37,7 +40,7 @@ export default function App() {
   useEffect(() => {
     if (!showWelcome && !target) {
       setTarget(
-        shuffledWords[Math.floor(Math.random() * shuffledWords.length)]
+        shuffledWords[Math.floor(Math.random() * shuffledWords.length)],
       );
     }
   }, [showWelcome, shuffledWords, target]);
