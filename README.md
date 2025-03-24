@@ -88,7 +88,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./welcome-mobile.png" style="width: 300px"/>
+  <img src="./public/welcome-mobile.png" style="width: 300px"/>
 
 </div>
 
@@ -96,7 +96,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./mobile-beginning.png" style="width: 300px"/>
+  <img src="./public/mobile-beginning.png" style="width: 300px"/>
 
 </div>
 
@@ -104,7 +104,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./mobile-mid.png" style="width: 300px"/>
+  <img src="./public/mobile-mid.png" style="width: 300px"/>
 
 </div>
 
@@ -112,7 +112,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./mobile-win.png" style="width: 300px"/>
+  <img src="./public/mobile-win.png" style="width: 300px"/>
 
 </div>
 
@@ -122,7 +122,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./welcome.png" style="width: 500px"/>
+  <img src="./public/welcome.png" style="width: 500px"/>
 
 </div>
 
@@ -130,7 +130,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./desktop-beginning.png" style="width: 500px"/>
+  <img src="./public/desktop-beginning.png" style="width: 500px"/>
 
 </div>
 
@@ -138,7 +138,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./desktop-mid.png" style="width: 500px"/>
+  <img src="./public/desktop-mid.png" style="width: 500px"/>
 
 </div>
 
@@ -146,6 +146,6 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./desktop-win.png" style="width: 500px"/>
+  <img src="./public/desktop-win.png" style="width: 500px"/>
 
 </div>
