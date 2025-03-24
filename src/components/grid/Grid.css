@@ -3,7 +3,7 @@
   gap: var(--spacing-xs);
   margin: var(--spacing-md) 0;
   width: 100%;
-  /* max-width: 22rem; */
+  max-width: 22rem;
 }
 
 .row {
@@ -41,22 +41,26 @@
   border: 0.125rem solid var(--color-light-gray);
 }
 
-@media (max-width: 24rem) {
-  .grid, .row {
-    gap: var(--spacing-sm);
+@media (max-width: 30rem) {
+  .grid {
+    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .cell {
-    width: 4rem;
-    height: 4rem;
-  }
-}
 
-@media (min-width: 24rem) {
-  .grid, .row {
-    gap: var(--spacing-sm);
+  .row {
+    gap: 0.15rem;
+    margin-bottom: 0.15rem;
   }
+
   .cell {
-    width: 5rem;
-    height: 5rem;
+    width: calc(20vw - 0.6rem);
+    height: calc(20vw - 0.6rem);
+    font-size: calc((20vw - 0.6rem) * 0.4);
+    border-width: 0.1rem;
   }
 }

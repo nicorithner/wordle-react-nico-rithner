@@ -99,10 +99,10 @@ export default function App() {
         <Welcome onStartGame={startNewGame} />
       ) : (
         <>
+          <div className="logo-container">
+            <WordleLogo animate={false} />
+          </div>
           <div className="game-wrapper">
-            <div className="logo-container">
-              <WordleLogo animate={false} />
-            </div>
             <div className="game-container">
               <Grid
                 guesses={guesses}
