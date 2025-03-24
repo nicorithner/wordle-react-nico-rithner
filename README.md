@@ -88,7 +88,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./welcome-mobile.png" style="width: 500px"/>
+  <img src="./welcome-mobile.png" style="width: 300px"/>
 
 </div>
 
@@ -96,7 +96,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./mobile-beginning.png" style="width: 500px"/>
+  <img src="./mobile-beginning.png" style="width: 300px"/>
 
 </div>
 
@@ -104,7 +104,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./mobile-mid.png" style="width: 500px"/>
+  <img src="./mobile-mid.png" style="width: 300px"/>
 
 </div>
 
@@ -112,7 +112,7 @@ To see the test details please inspect the files under the tests directory.
 
 <div align="center">
 
-  <img src="./mobile-win.png" style="width: 500px"/>
+  <img src="./mobile-win.png" style="width: 300px"/>
 
 </div>
 
