@@ -7,7 +7,7 @@
 ## Overview
 
 <div align="center">
-  <img src="./wordle-demo.gif" style="width: 700px"/>
+  <img src="./wordle-demo.gif" style="width: 1000px"/>
 </div>
 
 ## The Challenge
