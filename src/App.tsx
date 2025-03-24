@@ -112,6 +112,13 @@ export default function App() {
                 target={target}
                 currentGuess={currentGuess}
               />
+              <button
+                onClick={backToWelcome}
+                className="start-over-link"
+                aria-label="Return to welcome screen"
+              >
+                start over
+              </button>
               <div className="keyboard-section">
                 <Keyboard onKeyPress={handleKeyPress} usedKeys={usedKeys} />
               </div>
