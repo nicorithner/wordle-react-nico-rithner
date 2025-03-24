@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./wordle-logo-kopi.png"/>
+  <img src="./public/images/wordle-no-bkg.png"/>
 </div>
 
 # WORDLE GAME - REACT
