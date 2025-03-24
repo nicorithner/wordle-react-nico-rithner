@@ -100,7 +100,9 @@ export default function App() {
       ) : (
         <>
           <div className="game-wrapper">
-            <WordleLogo animate={false} />
+            <div className="logo-container">
+              <WordleLogo animate={false} />
+            </div>
             <div className="game-container">
               <Grid
                 guesses={guesses}

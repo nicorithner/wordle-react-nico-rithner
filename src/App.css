@@ -25,6 +25,10 @@
   margin: var(--spacing-lg);
 }
 
+.logo-container {
+  display: block;
+}
+
 .game-container {
   width: 100%;
   padding: var(--spacing-lg);
@@ -89,11 +93,16 @@
 
   .game-wrapper {
     width: 100%;
-    padding: var(--spacing-xxl);
     margin-bottom: 0;
     height: 70vh;
-    /* justify-content: space-between; */
-    gap: var(--spacing-xxl);
+  }
+
+  .logo-container {
+    max-width: fit-content;
+    height: auto;
+    margin: 0 0 1rem 1rem;
+    padding: 0;
+    align-self:self-start;
   }
 
   .game-container {
