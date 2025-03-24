@@ -25,10 +25,6 @@
   margin: var(--spacing-lg);
 }
 
-.logo-container {
-  display: block;
-}
-
 .game-container {
   width: 100%;
   padding: var(--spacing-lg);
@@ -92,10 +88,12 @@
   }
 
   .game-wrapper {
-    max-width: 100%;
+    width: 100%;
+    padding: var(--spacing-xxl);
     margin-bottom: 0;
     height: 70vh;
-    justify-content: center;
+    gap: var(--spacing-xxl);
+    justify-content:flex-start;
     align-items: center;
   }
 
@@ -111,7 +109,11 @@
   .game-container {
     width: 90%;
     padding: var(--spacing-sm);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
     height: fit-content;
+    margin-top: 1vh;
   }
 
   .keyboard-section {
