@@ -30,7 +30,7 @@ export default function App() {
     setGameWon(false);
     setUsedKeys({});
     setShowWelcome(false);
-  }, [shuffledWords]);
+  }, [shuffledWords, wordIndex]);
 
   const backToWelcome = useCallback(() => {
     setShowWelcome(true);
